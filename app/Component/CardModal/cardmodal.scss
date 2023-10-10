@@ -1,0 +1,118 @@
+.card-modal-section {
+    // background-color: #fcfcfc;
+    position: relative;
+    width: 100%;
+
+    .item-card-modal-section {
+        overflow: hidden;
+        aspect-ratio: 3/3;
+        width: 100%;
+
+        img {
+            border-radius: 10px;
+            object-fit: cover;
+            object-position: center;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .btn-card-modal-section {
+        background-color: #15151461;
+        width: 100%;
+        border-radius: 3px;
+        padding: 20px;
+        transition: 0.5s;
+        position: absolute;
+        backdrop-filter: blur(5px);
+        top: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fcfcfc;
+
+        p {
+            transition: 0.3s;
+        }
+
+        &:active {
+            p {
+                transition: 0.3s;
+                transform: scale(0.9);
+            }
+        }
+    }
+}
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    background-color: #0000003f;
+    left: 0;
+    top: 0;
+    position: fixed;
+
+    &.modal-active {
+        display: block;
+        // position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &.modal-non-active {
+        display: none;
+    }
+
+    .item-modal {
+        top: 50%;
+        // width: 80%;
+        background-color: #00000062;
+        backdrop-filter: blur(5px);
+        border-radius: 10px;
+        transition: ease-in-out 0.5s;
+        padding: 10px;
+        width: 70vw;
+
+        .btn-modal {
+            button {
+                color: #fcfcfc;
+                padding: 5px;
+                transition: 0.5s;
+
+                &:active {
+                    transform: scale(0.8);
+                }
+            }
+        }
+
+        .body-modal {
+            height: 70vh;
+            display: flex;
+            // justify-content: center;
+            aspect-ratio: 16/9;
+            gap: 10px;
+            // height: 100%;
+            width: 100%;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            padding: 10px;
+
+            // aspect-ratio: 1/1;
+            .img-body-modal {
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        }
+
+        .footer-modal {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            color: #fcfcfc;
+        }
+    }
+}
